@@ -1,5 +1,5 @@
 const config = {
-  environment: "development"
+  environment: "context"
 };
 
 window.MOVIES_STOCKBIT = config;

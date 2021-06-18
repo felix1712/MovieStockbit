@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start:dev": "cp src/config/js/dev.js public/config/application.js && cp src/config/environments/.env.dev .env && react-scripts start",
+    "start:staging": "cp src/config/js/staging.js public/config/application.js && cp src/config/environments/.env.staging .env && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

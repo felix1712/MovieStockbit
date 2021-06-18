@@ -1,5 +1,5 @@
 const config = {
-  environment: "context"
+  environment: "redux"
 };
 
 window.MOVIES_STOCKBIT = config;

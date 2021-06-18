@@ -6,11 +6,12 @@ import AppHooks from "./AppHooks";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
+import appConfig from "./config/application";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <AppHooks />
+      {appConfig.environment === "context" ? <AppHooks /> : null}
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
