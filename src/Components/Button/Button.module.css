@@ -1,0 +1,41 @@
+.button_content {
+  padding: 0.5rem 1rem;
+  color: var(--secondaryTextWhite);
+  outline: none;
+  margin: 5px 0;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  border: none rgb(200, 200, 200);
+  height: 40px;
+}
+
+.normal_button {
+  border-radius: 2px;
+}
+
+.rounded_button {
+  border-radius: 30px;
+}
+
+.blue_button {
+  background: var(--primaryTextBlue);
+  color: var(--textWhite);
+}
+
+.orange_button {
+  background: var(--primaryOrange);
+  color: var(--secondaryTextWhite);
+}
+
+.disabled_button {
+  background: var(--primaryPlaceholder);
+  pointer-events: none;
+}
+
+.block_button {
+  width: 100%;
+}

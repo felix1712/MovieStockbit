@@ -1,0 +1,32 @@
+.item_poster_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.item_poster_container img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+.item_description {
+  margin-top: 0.5rem;
+}
+
+.item_description p,
+.item_description h5 {
+  margin-bottom: 0;
+  margin: 0;
+}
+
+.item_subdescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_subdescription p {
+  text-transform: capitalize;
+}

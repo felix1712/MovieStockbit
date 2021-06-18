@@ -1,0 +1,59 @@
+.full_landing_page {
+  background: linear-gradient(90deg, #deefdc, #9fd5f3);
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.full_landing_page ul,
+.full_landing_page input {
+  height: 70px;
+}
+
+.landing_page_title {
+  color: var(--primaryTextBlue);
+  margin-bottom: 2.5rem;
+}
+
+.landing_page_title h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.landing_page_search {
+  min-width: 50%;
+}
+
+.home_movies_list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.movies_list_item {
+  flex: 1 0 13%;
+  margin: 0 1.7rem;
+  min-height: 1px;
+  width: 100%;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.movies_list_item:first-of-type {
+  margin-left: 0;
+}
+
+.new_relese_movie {
+  margin-top: 3rem;
+}
+
+.new_relese_movie h3 {
+  color: var(--primaryTextBlue);
+  margin: 0;
+}
