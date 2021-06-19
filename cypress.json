@@ -1,0 +1,14 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "testFiles": "**/*.{feature,features}",
+  "ignoreTestFiles": "*.js",
+  "screenshotsFolder": "cypress/screenshots",
+  "blockHosts": ["*fonts.googleapis.com", "**/sockjs-node/**"],
+  "trashAssetsBeforeRuns": true,
+  "video": false,
+  "videoUploadOnPasses": false,
+  "watchForFileChanges": false,
+  "defaultCommandTimeout": 20000,
+  "pageLoadTimeout": 60000,
+  "retries": 0
+}
