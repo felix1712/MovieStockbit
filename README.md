@@ -1,16 +1,35 @@
+Movie Stockbit
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm run start:dev
 
-Runs the app in the development mode.<br />
+Start Application with Hooks and Context Concept
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+### `npm run start:staging`
+
+Start Application with Redux Concept
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run cy:run`
+
+Launch unit test using cypress in Terminal
+
+### `npm run cy:open`
+
+Laucn unit test Cypress and open it in cypress GUI
+
+### `npm run coverage`
+
+Open unit test coverage
 
 ### `yarn test`
 
