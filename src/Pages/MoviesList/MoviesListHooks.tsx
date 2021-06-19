@@ -13,10 +13,13 @@ export const MoviesListHooks = (props: any) => {
     moviesListSearch
   } = useMoviesListHooks(props);
   return (
-    <>
+    <div data-cy="movies_list_frame">
       <Header {...props} />
       <div className="desktop-boxed">
-        <div className={styles["movies_list_container"]}>
+        <div
+          className={styles["movies_list_container"]}
+          data-cy="movies_list_container"
+        >
           {moviesListSearch.map((data: any, index: number) => (
             <div
               onClick={() => toMovieDetail(data)}
@@ -25,6 +28,7 @@ export const MoviesListHooks = (props: any) => {
                 moviesListSearch.length === index + 1 ? lastElementRef : null
               }
               className={styles["movies_list_item"]}
+              data-cy={"list_item_" + index}
             >
               <MoviePoster
                 poster={data.Poster}
@@ -39,6 +43,6 @@ export const MoviesListHooks = (props: any) => {
           {isLoading && <LoaderPartial />}
         </div>
       </div>
-    </>
+    </div>
   );
 };

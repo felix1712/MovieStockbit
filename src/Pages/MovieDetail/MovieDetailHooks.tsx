@@ -31,7 +31,7 @@ const RatingComponent = (props: any) => {
 export const MovieDetailHooks = (props: any) => {
   const { modalOpen, movieDetail, handleModal } = useMovieDetailHooks(props);
   return (
-    <div>
+    <div data-cy="movie_detail_frame">
       <Header {...props} />
       <div className="desktop-boxed">
         <div className={styles["movie_detail_container"]}>
