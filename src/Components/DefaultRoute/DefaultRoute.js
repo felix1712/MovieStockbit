@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const DefaultRoute = ({ component: Component, ...rest }) => {
-  const [isDeviceMobile, setIsDeviceMobile] = useState(isMobile);
+  const [isDeviceMobile, setIsDeviceMobile] = useState(false);
   const useUpdateRoute = () => {
     window.scrollTo(0, 0);
     (a => {
