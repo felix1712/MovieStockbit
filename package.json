@@ -21,9 +21,12 @@
   "scripts": {
     "start": "react-scripts start",
     "start:dev": "cp src/config/js/dev.js public/config/application.js && cp src/config/environments/.env.dev .env && react-scripts start",
-    "start:staging": "cp src/config/js/staging.js public/config/application.js && cp src/config/environments/.env.staging .env && react-scripts start",
+    "start:staging": "cp src/config/js/staging.js public/config/application.js && cp src/config/environments/.env.staging .env && react-scripts -r @cypress/instrument-cra start",
+    "cy:open": "cypress open",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "start-server-and-test start:dev http://localhost:3000 cy:run",
+    "cy:run": "cypress run --browser chrome",
+    "coverage": "open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,9 +45,16 @@
     ]
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.6",
+    "@cypress/instrument-cra": "^1.4.0",
     "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
+    "cypress": "^7.5.0",
+    "cypress-cucumber-preprocessor": "^4.1.2",
     "prop-types": "^15.7.2",
     "react-router-dom": "^5.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
