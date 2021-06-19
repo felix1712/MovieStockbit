@@ -25,6 +25,7 @@ export interface IInputText {
   required?: boolean | false;
   tabindex?: number;
   style?: CSSProperties;
+  cy?: string;
 }
 
 export const InputText: FC<IInputText> = props => {
@@ -45,7 +46,8 @@ export const InputText: FC<IInputText> = props => {
     maxlength,
     required,
     tabindex,
-    style
+    style,
+    cy
   } = props;
   return (
     <>
@@ -68,6 +70,7 @@ export const InputText: FC<IInputText> = props => {
         required={required}
         tabindex={tabindex}
         style={style}
+        cy={cy}
       />
     </>
   );

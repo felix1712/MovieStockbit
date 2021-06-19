@@ -26,6 +26,7 @@ export interface IMasterInput {
   required?: boolean | false;
   tabindex?: number;
   style?: CSSProperties;
+  cy?: string;
 }
 
 export const MasterInput: FC<IMasterInput> = props => {
@@ -47,7 +48,8 @@ export const MasterInput: FC<IMasterInput> = props => {
     maxlength,
     required,
     tabindex,
-    style
+    style,
+    cy
   } = props;
   return (
     <div className={styles.input_frame}>
@@ -108,6 +110,8 @@ export const MasterInput: FC<IMasterInput> = props => {
         style={style}
         value={value}
         readOnly={(value && !onChange) || readonly}
+        autoComplete="off"
+        data-cy={cy}
       />
 
       {helperText && !errorText && (
