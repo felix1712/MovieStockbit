@@ -40,6 +40,7 @@ export const SearchBar = (props: any) => {
                 onChangeSingleSearchInput(e.target.value)
               }
               onBlur={leaveInput}
+              cy="input_search"
             />
             <span
               className={styles["search_bar_icon"]}
@@ -52,12 +53,16 @@ export const SearchBar = (props: any) => {
       </form>
       <div>
         {isSuggestion && (
-          <div className={styles["search_suggestion_container"]}>
+          <div
+            className={styles["search_suggestion_container"]}
+            data-cy="search_suggestion_container"
+          >
             {moviesSuggestion.map((data: any, index: number) => (
               <div
                 className={styles["suggestion_item"]}
                 key={index}
                 onClick={() => toMovieDetail(data)}
+                data-cy={"suggestion_item_" + index}
               >
                 <div className={styles["suggestion_poster"]}>
                   <ImageTag src={data.Poster} alt={data.Title} />

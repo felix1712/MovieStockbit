@@ -44,7 +44,9 @@ export const useSearchBar = (props: any) => {
   };
 
   const leaveInput = () => {
-    setIsSuggestion(false);
+    setTimeout(() => {
+      setIsSuggestion(false);
+    }, 2000);
   };
 
   const handleChangeSelectOption = (data: string, dataLabel?: any) => {
