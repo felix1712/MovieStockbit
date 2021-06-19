@@ -36,7 +36,10 @@ export const MovieDetailHooks = (props: any) => {
       <div className="desktop-boxed">
         <div className={styles["movie_detail_container"]}>
           <div className={styles["detail_top_section"]}>
-            <div className={styles["top_detail_poster"]}>
+            <div
+              className={styles["top_detail_poster"]}
+              data-cy="detail_poster"
+            >
               <ImageTag
                 src={movieDetail.Poster}
                 alt={movieDetail.Title}
@@ -44,13 +47,19 @@ export const MovieDetailHooks = (props: any) => {
               />
             </div>
             <div className={styles["top_detail_reviews"]}>
-              <div className={styles["top_detail_header"]}>
+              <div
+                className={styles["top_detail_header"]}
+                data-cy="detail_title"
+              >
                 <Text variant="h1">
                   {movieDetail.Title}
                   <span>( {movieDetail.Year} )</span>
                 </Text>
               </div>
-              <div className={styles["top_detail_subheader"]}>
+              <div
+                className={styles["top_detail_subheader"]}
+                data-cy="detail_genre"
+              >
                 <Text>{movieDetail.Runtime}</Text>
                 <Text>{movieDetail.Genre}</Text>
               </div>
